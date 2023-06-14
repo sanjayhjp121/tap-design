@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+    />
+    <meta name="description" content="Mrittik is a Modern Architecture Theme" />
+    <meta name="author" content="" />
+
+    <!-- Favicon and touch Icons -->
+    <link href="/assets/img/favicon.png" rel="shortcut icon" type="image/png" />
+    <link href="/assets/img/apple-touch-icon.html" rel="apple-touch-icon" />
+    <link
+      href="/assets/img/apple-touch-icon-72x72.html"
+      rel="apple-touch-icon"
+      sizes="72x72"
+    />
+    <link
+      href="/assets/img/apple-touch-icon-114x114.html"
+      rel="apple-touch-icon"
+      sizes="114x114"
+    />
+    <link
+      href="/assets/img/apple-touch-icon-144x144.html"
+      rel="apple-touch-icon"
+      sizes="144x144"
+    />
+
+    <!-- Page Title -->
+    <title>TAP - Modern Architecture</title>
+
+    <!-- Styles Include -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body class="bg-white">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader-inner">
+        <div class="spinner"></div>
+        <div class="loading-text">
+          <span data-preloader-text="T" class="characters">T</span>
+
+          <span data-preloader-text="A" class="characters">A</span>
+
+          <span data-preloader-text="P" class="characters">P</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Color Mode Switcher -->
+    <div id="mode_switcher" class="d-none">
+      <span><i class="bi bi-moon-fill"></i></span>
+    </div>
+
+    <!-- Cursor Effect -->
+    <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+
+    <!-- Header -->
+    <%- include('header'); -%>
+
+    <!-- Page Header -->
+    <!-- <div class="page_header">
+      <div class="page_header_inner">
+        <div class="container">
+          <div
+            class="page_header_content d-flex align-items-center justify-content-between"
+          >
+            <h2 class="heading">Shop</h2>
+            <ul class="breadcrumb d-flex align-items-center">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Pages</a></li>
+              <li class="active">Shop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <main class="wrapper">
+      <section class="shop_page bg-dark-200" style="margin-top: 64px">
+        <div class="container">
+          <div
+            class="shop_filtering_method d-flex align-items-center flex-wrap"
+          >
+            <div class="view_type_wrapper d-flex align-items-center">
+              <ul class="nav view_type d-flex align-items-center">
+                <li>
+                  <a
+                    class="icon-grid active"
+                    id="grid-tab"
+                    data-bs-toggle="tab"
+                    href="#grid"
+                    ><i class="bi bi-grid-3x2-gap-fill"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="icon-list"
+                    id="list-tab"
+                    data-bs-toggle="tab"
+                    href="#list"
+                    ><i class="bi bi-list-task"></i
+                  ></a>
+                </li>
+              </ul>
+              <div class="showing_results">Showing 1-12 of 42 results</div>
+            </div>
+            <!-- <div class="sorting_wrapper">
+              <div class="sorting_select">
+                <select class="basic_select" id="sorting">
+                  <option style="color: white !important" value="0">
+                    Categories
+                  </option>
+                  <option style="color: white !important" value="1">
+                    Category
+                  </option>
+                  <option style="color: white !important" value="2">
+                    Category
+                  </option>
+                  <option style="color: white !important" value="3">
+                    Category
+                  </option>
+                  <option style="color: white !important" value="4">
+                    Category
+                  </option>
+                </select>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="tab-content">
+            <div
+              class="tab-pane fade show active"
+              id="grid"
+              role="tabpanel"
+              aria-labelledby="grid-tab"
+            >
+              <div class="product_view_type">
+                <div class="product_view_grid product_col_4 type_1">
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <span class="badge-new">New</span>
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/1-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Decor Plant</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/2-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Hanging Light</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <span class="badge-sale">Sale</span>
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/3-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Green Armchair</a>
+                            <span class="product_item_price">
+                              <del class="old_price">$19.00</del> $15.00</span
+                            >
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/4-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Brown Table Lamp</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <span class="badge-new">New</span>
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/5-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Wooden Center Table</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/6-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Snake Plant</a>
+                            <span class="product_item_price"
+                              ><del class="old_price">$23.00</del> $19.00</span
+                            >
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/7-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Center Table</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/8-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Alarm Clock</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <span class="badge-sale">Sale</span>
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/9-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Black Vase</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <span class="badge-new">New</span>
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/10-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">White Armchair</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <span class="badge-new">New</span>
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/11-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Teal Rug</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product_item">
+                    <div class="product_thumb">
+                      <div class="product_imagebox">
+                        <span class="badge-sale">Sale</span>
+                        <img
+                          class="primary_img"
+                          src="/assets/img/shop/products/12-1.png"
+                          alt="img"
+                        />
+                        <div class="cart_button">
+                          <a href="#" class="button"> Add to Cart </a>
+                        </div>
+                      </div>
+                      <div class="product_item_inner">
+                        <div class="label_text">
+                          <h4 class="product_item_name">
+                            <a href="/">Plant With Stand</a>
+                            <span class="product_item_price">$15.00</span>
+                          </h4>
+                          <div class="product_category">
+                            <a href="#">Decoration</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination-div">
+                  <ul class="pagination">
+                    <li><a class="page-number current" href="#">1</a></li>
+                    <li><a class="page-number" href="#">2</a></li>
+                    <li><a class="page-number" href="#">3</a></li>
+                    <li><a class="page-number" href="#">4</a></li>
+                    <li><a class="page-number" href="#">...</a></li>
+                    <li><a class="page-number" href="#">8</a></li>
+                    <li>
+                      <a href="#"><i class="bi bi-chevron-right"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="list"
+              role="tabpanel"
+              aria-labelledby="list-tab"
+            >
+              <div class="product_view_list">
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/1-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Decor Plant</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/2-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Hanging Light</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-sale">Sale</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/3-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Green Armchair</a>
+                          <span class="product_item_price">
+                            <del class="old_price">$19.00</del> $15.00</span
+                          >
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/4-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Brown Table Lamp</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/5-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Wooden Center Table</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/6-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Snake Plant</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/7-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Center Table</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/8-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Alarm Clock</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/9-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Black Vase</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/10-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">White Armchair</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/11-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Teal Rug</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product_item">
+                  <div class="product_thumb">
+                    <div class="product_imagebox">
+                      <span class="badge-new">New</span>
+                      <img
+                        class="primary_img"
+                        src="/assets/img/shop/products/12-1.png"
+                        alt="img"
+                      />
+                    </div>
+                    <div class="product_item_inner">
+                      <div class="label_text">
+                        <h4 class="product_item_name">
+                          <a href="/">Plant With Stand</a>
+                          <span class="product_item_price">$15.00</span>
+                        </h4>
+                        <div class="rating">
+                          <ul>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                            <li><i class="bi bi-star-fill"></i></li>
+                          </ul>
+                        </div>
+                        <div class="cart_button">
+                          <a href="#" class="button">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="btn_group">
+                  <button id="load-more" class="btn olive w-100">
+                    Show More Product(s)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer-->
+    <%- include('header'); -%>
+
+
+    <div class="totop">
+      <a href="#">UP</a>
+    </div>
+
+    <!-- Section Grid Lines -->
+    <ul class="grid_lines d-none d-md-flex justify-content-between">
+      <li class="grid_line"></li>
+      <li class="grid_line"></li>
+      <li class="grid_line"></li>
+      <li class="grid_line"></li>
+      <li class="grid_line"></li>
+      <li class="grid_line"></li>
+      <li class="grid_line"></li>
+    </ul>
+
+    <!-- Core JS -->
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/plugins/jquery_ui/jquery-ui.1.12.1.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Side Menu -->
+    <script src="/plugins/menu/ma5-menu.min.js"></script>
+
+    <!-- Swiper for Slider Type -->
+    <script src="/plugins/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Funfacts -->
+    <!-- <script src="/assets/js/funfacts.js"></script> -->
+
+    <!-- Portfolio -->
+    <script src="/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="/plugins/isotope/imagesloaded.pkgd.min.js"></script>
+    <script src="/plugins/isotope/packery-mode.pkgd.js"></script>
+    <script src="/plugins/isotope/tilt.jquery.js"></script>
+    <!-- <script src="/plugins/isotope/isotope-init.js"></script> -->
+
+    <!-- Cursor Effect -->
+    <script src="/plugins/cursor-effect/cursor-effect.js"></script>
+
+    <!-- Select2 -->
+    <script src="/plugins/select2/js/select2.min.js"></script>
+
+    <!-- Price Range -->
+    <script src="/plugins/price_range/script.js"></script>
+
+    <!-- AOS effect JS -->
+    <script src="/plugins/aos/aos.js"></script>
+
+    <!-- Theme Custom JS -->
+    <script src="/assets/js/theme.js"></script>
+  </body>
+</html>
